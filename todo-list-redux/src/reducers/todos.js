@@ -2,10 +2,6 @@
  * Created by devSC on 2017/9/15.
  */
 
-/*
- * action 类型
- */
-
 export const ADD_TODO = 'ADD_TODO';
 export const COMPLETE_TODO = 'COMPLETE_TODO';
 
