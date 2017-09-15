@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 
 let yeomanImage = require('../images/yeoman.png');
 
+
 export default class AppComponent extends Component {
   render() {
     return (
@@ -16,14 +17,6 @@ export default class AppComponent extends Component {
   }
 }
 
-class Test extends Component {
-	render() {
-		return {
-			<div className="">
-			</div>
-		}
-	}
-}
-
 AppComponent.defaultProps = {
+
 };
