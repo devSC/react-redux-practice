@@ -11,12 +11,21 @@ const todo = (state, action) => {
 		//如果是 ADD_TODO
 		case ADD_TODO:
 			return {
-				id: action.id,
+				id: action.id, //action id 和 list id 相对应
 				text: action.text,
 				completed: false
 			};
 
 		case COMPLETE_TODO:
+
+			/*
+			这里的state 相当于单条的
+			{
+				id: action.id, //action id 和 list id 相对应
+				text: action.text,
+				completed: false
+			}
+			*/
 			if (state.id !== action.id) {
 				return state;
 			}
@@ -31,8 +40,9 @@ const todo = (state, action) => {
 
 //列表
 const todos = (state = [], action) => {
+	console.log("todos - action: ", action);
 	switch (action.type) {
-		//如果是 ADD_TODO
+		//如果是 ADD_TODO,重新结合返回一个新的state
 		case ADD_TODO:
 			return [
 				...state,
